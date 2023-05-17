@@ -1,7 +1,7 @@
 package com.example.studyproject.Entity;
 
 import jakarta.persistence.*;
-
+//
 public class Member_sub {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
