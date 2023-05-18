@@ -16,4 +16,6 @@ public class Subject {
     private String endDate;
     @OneToMany
     private Set<Assignment> assignments = new HashSet<>();
+    @OneToOne
+    private Member member;
 }
