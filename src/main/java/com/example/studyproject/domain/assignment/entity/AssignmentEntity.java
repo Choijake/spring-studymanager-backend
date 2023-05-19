@@ -1,5 +1,6 @@
 package com.example.studyproject.domain.assignment.entity;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
 
