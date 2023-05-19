@@ -1,11 +1,12 @@
-package com.example.studyproject.Entity;
+package com.example.studyproject.domain.member.entity;
 
+import com.example.studyproject.Entity.Subject;
 import jakarta.persistence.*;
 import lombok.Getter;
 
 @Getter
-@Entity
-public class Member {
+@jakarta.persistence.Entity
+public class MemberEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

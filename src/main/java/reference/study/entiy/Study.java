@@ -1,4 +1,4 @@
-package com.example.studyproject.domain.study.entiy;
+package reference.study.entiy;
 
 import com.example.studyproject.Entity.Member;
 import com.example.studyproject.domain.defaultEntity.BaseTimeEntity;

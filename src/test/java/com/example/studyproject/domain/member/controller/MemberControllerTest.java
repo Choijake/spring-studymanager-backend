@@ -1,8 +1,6 @@
 package com.example.studyproject.domain.member.controller;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import com.example.studyproject.domain.study.entiy.Study;
+import reference.study.entiy.Study;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
