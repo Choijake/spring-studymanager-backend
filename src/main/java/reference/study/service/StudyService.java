@@ -1,6 +1,6 @@
-package com.example.studyproject.domain.study.service;
+package reference.study.service;
 
-import com.example.studyproject.domain.study.controller.dto.StudyCreatRequestDto;
+import reference.study.controller.dto.StudyCreatRequestDto;
 import org.springframework.stereotype.Service;
 
 @Service

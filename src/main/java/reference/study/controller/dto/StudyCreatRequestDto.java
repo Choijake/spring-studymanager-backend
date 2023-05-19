@@ -1,4 +1,4 @@
-package com.example.studyproject.domain.study.controller.dto;
+package reference.study.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

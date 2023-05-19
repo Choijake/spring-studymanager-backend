@@ -1,11 +1,9 @@
-package com.example.studyproject.domain.study.controller;
+package reference.study.controller;
 
-import com.example.studyproject.domain.member.service.MemberService;
-import com.example.studyproject.domain.study.controller.dto.StudyCreatRequestDto;
-import com.example.studyproject.domain.study.controller.dto.StudyCreatResponseDto;
-import com.example.studyproject.domain.study.service.StudyService;
+import reference.study.controller.dto.StudyCreatRequestDto;
+import reference.study.controller.dto.StudyCreatResponseDto;
+import reference.study.service.StudyService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
