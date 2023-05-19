@@ -1,6 +1,6 @@
 package com.example.studyproject.domain.member.entity;
 
-import com.example.studyproject.Entity.Subject;
+import com.example.studyproject.domain.subject.entity.SubjectEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -16,5 +16,5 @@ public class MemberEntity {
     private boolean attendance; //출석 여부
     private boolean presentation; //발표 여부
     @OneToOne
-    private Subject subject;
+    private SubjectEntity subject;
 }
