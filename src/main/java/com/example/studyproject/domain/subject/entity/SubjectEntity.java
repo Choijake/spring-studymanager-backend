@@ -4,6 +4,7 @@ import com.example.studyproject.domain.assignment.entity.AssignmentEntity;
 
 import com.example.studyproject.domain.member.entity.MemberEntity;
 import jakarta.persistence.*;
+import org.springframework.data.annotation.Id;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,4 +22,14 @@ public class SubjectEntity {
     private Set<AssignmentEntity> assignments = new HashSet<>(); //과제 엔티티
     @OneToOne
     private MemberEntity member;
+    @jakarta.persistence.Id
+    private Long id;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
