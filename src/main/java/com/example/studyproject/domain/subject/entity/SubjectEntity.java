@@ -1,7 +1,10 @@
 package com.example.studyproject.domain.subject.entity;
 
 import com.example.studyproject.domain.assignment.entity.AssignmentEntity;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ee260c986bfc221c47f90a1b7909220df4288fa3
 import com.example.studyproject.domain.member.entity.MemberEntity;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
