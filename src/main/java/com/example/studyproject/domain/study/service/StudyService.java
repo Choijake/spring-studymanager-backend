@@ -6,6 +6,8 @@ import com.example.studyproject.domain.study.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class StudyService {
     private StudyRepository studyRepository;
@@ -14,6 +16,11 @@ public class StudyService {
         this.studyRepository = studyRepository;
     }
 
+    //스터디 목록 보기
+    @Transactional
+    public List<StudyEntity> readAllStudy() {
+        return studyRepository.findAll();
+    }
 
     //스터디 생성
     @Transactional

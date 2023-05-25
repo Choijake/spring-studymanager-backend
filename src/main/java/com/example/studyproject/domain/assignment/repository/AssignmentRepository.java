@@ -1,4 +1,7 @@
 package com.example.studyproject.domain.assignment.repository;
 
-public class AssignmentRepository {
+import com.example.studyproject.domain.assignment.entity.AssignmentEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AssignmentRepository extends JpaRepository<AssignmentEntity, Long> {
 }
