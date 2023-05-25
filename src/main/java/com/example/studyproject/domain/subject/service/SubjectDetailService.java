@@ -8,15 +8,15 @@ import com.example.studyproject.domain.study.repository.StudyRepository;
 import com.example.studyproject.domain.study.service.StudyService;
 import com.example.studyproject.domain.subject.repository.SubjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
 public class SubjectDetailService {
     @Autowired
     private StudyRepository studyRepository;
-    @Autowired
-    private SubjectRepository subjectRepository;
     @Autowired
     private StudyService studyService;
     @Autowired

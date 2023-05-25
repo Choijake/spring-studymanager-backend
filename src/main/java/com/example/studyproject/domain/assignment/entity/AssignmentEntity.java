@@ -5,9 +5,13 @@ package com.example.studyproject.domain.assignment.entity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
+@Component
+@NoArgsConstructor
 @Getter
 @Entity
 public class AssignmentEntity {
@@ -40,4 +44,7 @@ public class AssignmentEntity {
         this.weeks = weeks;
     }
 
+    public void setAssignmentName(String assignmentName){
+        this.assignmentName = assignmentName;
+    }
 }

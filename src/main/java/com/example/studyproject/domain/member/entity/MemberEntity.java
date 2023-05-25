@@ -4,7 +4,10 @@ import com.example.studyproject.domain.subject.entity.SubjectEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.context.annotation.Bean;
 
+@NoArgsConstructor
 @Getter
 @jakarta.persistence.Entity
 public class MemberEntity {
@@ -14,8 +17,8 @@ public class MemberEntity {
 
     @Column(name = "")
     private String memberName;
-    private boolean attendance; //출석 여부
-    private boolean presentation; //발표 여부
+    private boolean attendance=false; //출석 여부
+    private boolean presentation=false; //발표 여부
 
     @OneToOne
     private SubjectEntity subject;
@@ -26,5 +29,12 @@ public class MemberEntity {
         this.memberName = memberName;
         this.attendance = attendance;
         this.presentation = presentation;
+    }
+    public void setAttendance(boolean attendance) {
+        attendance = true;
+    }
+
+    public void setPresentation(boolean presentation) {
+        presentation = true;
     }
 }
