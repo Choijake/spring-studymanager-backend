@@ -2,7 +2,6 @@ package com.example.studyproject.domain.assignment.service;
 
 import com.example.studyproject.domain.assignment.entity.AssignmentEntity;
 import com.example.studyproject.domain.assignment.repository.AssignmentRepository;
-import com.example.studyproject.domain.member.dto.MemberDto;
 import com.example.studyproject.domain.member.entity.MemberEntity;
 import com.example.studyproject.domain.member.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +14,11 @@ import java.util.Locale;
 
 @Service
 public class AssignmentService {
+
     @Autowired
     private AssignmentRepository assignmentRepository;
     @Autowired
     private MemberRepository memberRepository;
-    @Autowired
-    private AssignmentEntity assignmentEntity; //@Component 필수?
 
     //몇주차인지
     @Transactional
@@ -64,8 +62,9 @@ public class AssignmentService {
     }
 
     //주차별로 과제이름(ex. 세션 4,5듣기)
-    public void updateWeekelyAssignment(String weeklyAssignment){
-        assignmentEntity.setAssignmentName(weeklyAssignment);
+    public void updateWeekelyAssignment(String assignmentName){
+        int week = 0;
+        AssignmentEntity assignmentEntity = new AssignmentEntity(assignmentName, week);
         assignmentRepository.save(assignmentEntity);
     }
 

@@ -1,6 +1,5 @@
 package com.example.studyproject.domain.assignment.dto;
 
-
 import com.example.studyproject.domain.assignment.entity.AssignmentEntity;
 import lombok.Builder;
 import lombok.Getter;
@@ -30,11 +29,7 @@ public class AssignmentDto {
 
         public AssignmentEntity toEntity() {
                 AssignmentEntity build = AssignmentEntity.builder()
-                        .id(id)
                         .assignmentName(assignmentName)
-                        .assignmentStartDate(assignmentStartDate)
-                        .assignmentEndDate(assignmentEndDate)
-                        .assignmentProgress(assignmentProgress)
                         .weeks(weeks)
                         .build();
                 return build;
