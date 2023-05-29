@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController //controller임을 알려주는 표시
-@RequiredArgsConstructor
+
 @RequestMapping("/study")
 public class StudyController {
     private StudyService studyService;

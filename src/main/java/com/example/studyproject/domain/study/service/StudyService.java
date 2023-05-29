@@ -3,6 +3,7 @@ package com.example.studyproject.domain.study.service;
 import com.example.studyproject.domain.study.dto.CreateStudyResponseDto;
 import com.example.studyproject.domain.study.entity.StudyEntity;
 import com.example.studyproject.domain.study.repository.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,6 +11,8 @@ import java.util.List;
 
 @Service
 public class StudyService {
+
+    @Autowired
     private StudyRepository studyRepository;
 
     public StudyService(StudyRepository studyRepository){
