@@ -2,14 +2,16 @@ package com.example.studyproject.domain.member.entity;
 
 import com.example.studyproject.domain.subject.entity.SubjectEntity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Bean;
 
-@NoArgsConstructor
 @Getter
-@jakarta.persistence.Entity
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class MemberEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,12 +26,12 @@ public class MemberEntity {
     private SubjectEntity subject;
 
     @Builder
-    public MemberEntity(Long id, String memberName, boolean attendance, boolean presentation) {
-        this.id = id;
+    public MemberEntity(String memberName, boolean attendance, boolean presentation) {
         this.memberName = memberName;
         this.attendance = attendance;
         this.presentation = presentation;
     }
+
     public void setAttendance(boolean attendance) {
         attendance = true;
     }

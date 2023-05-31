@@ -10,20 +10,14 @@ import java.time.LocalDate;
 @Getter
 @NoArgsConstructor
 public class AssignmentDto {
-        private Long id;
+
         private String assignmentName;
-        private LocalDate assignmentStartDate;
-        private LocalDate assignmentEndDate;
-        private float assignmentProgress;
+
         private int weeks;
 
         @Builder
-        public AssignmentDto(Long id, String assignmentName, LocalDate assignmentStartDate, LocalDate assignmentEndDate, float assignmentProgress, int weeks){
-                this.id=id;
+        public AssignmentDto(String assignmentName, int weeks){
                 this.assignmentName=assignmentName;
-                this.assignmentStartDate=assignmentStartDate;
-                this.assignmentEndDate=assignmentEndDate;
-                this.assignmentProgress=assignmentProgress;
                 this.weeks=weeks;
         }
 
