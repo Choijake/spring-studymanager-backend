@@ -3,9 +3,11 @@ package com.example.studyproject.domain.member.service;
 import com.example.studyproject.domain.member.dto.MemberDto;
 import com.example.studyproject.domain.member.entity.MemberEntity;
 import com.example.studyproject.domain.member.repository.MemberRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
+@Service
 public class MemberService {
     private MemberRepository memberRepository;
 

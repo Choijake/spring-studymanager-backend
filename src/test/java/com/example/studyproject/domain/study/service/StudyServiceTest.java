@@ -38,17 +38,24 @@ class StudyServiceTest {
     @Test
     @DisplayName("스터디 목록 읽기 성공")
     void readAllStudy() {
+        // Given
         StudyEntity st1 = new StudyEntity("choi", "python", "dkdk");
         StudyEntity st2 = new StudyEntity("ryu", "java", "dfkfk");
         studyRepository.save(st1);
         studyRepository.save(st2);
 
-        List<StudyEntity> expectedList = Arrays.asList(st1, st2);
+        // When
         List<StudyEntity> actualList = studyService.readAllStudy();
 
-//        assertIterableEquals(expectedList, actualList);
+        // Then
+        assertEquals(2, actualList.size());
+        assertEquals(st1.getStudyName(), actualList.get(0).getStudyName());
+        assertEquals(st1.getStudySubject(), actualList.get(0).getStudySubject());
+        assertEquals(st1.getStudyMethod(), actualList.get(0).getStudyMethod());
+        assertEquals(st2.getStudyName(), actualList.get(1).getStudyName());
+        assertEquals(st2.getStudySubject(), actualList.get(1).getStudySubject());
+        assertEquals(st2.getStudyMethod(), actualList.get(1).getStudyMethod());
     }
-
 
 
     @Test
