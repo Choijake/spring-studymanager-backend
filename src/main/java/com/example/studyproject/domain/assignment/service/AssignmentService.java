@@ -62,12 +62,11 @@ public class AssignmentService {
     }
 
     //주차별로 과제이름(ex. 세션 4,5듣기)
-    public void updateWeekelyAssignment(String assignmentName){
-        int week = 0;
-        AssignmentEntity assignmentEntity = new AssignmentEntity(assignmentName, week);
+    public void updateWeekelyAssignment(String assignmentName, int weeks){
+        AssignmentEntity assignmentEntity = new AssignmentEntity(assignmentName, weeks);
         assignmentRepository.save(assignmentEntity);
     }
 
-    //주차별로 시작날짜와 끝나는 날짜
+
 
 }

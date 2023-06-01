@@ -31,7 +31,4 @@ public class MemberController {
         return memberService.readAllMember();
     }
 
-
-
-
 }

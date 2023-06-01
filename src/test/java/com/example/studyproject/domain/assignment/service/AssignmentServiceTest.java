@@ -86,9 +86,9 @@ class AssignmentServiceTest {
     @DisplayName("Test updateWeeklyAssignment")
     void testUpdateWeeklyAssignment() {
         String assignmentName = "Assignment 1";
-
+        int week = 2;
         // Call the method
-        assignmentService.updateWeekelyAssignment(assignmentName);
+        assignmentService.updateWeekelyAssignment(assignmentName, week);
 
         // Verify that the assignment is saved
         ArgumentCaptor<AssignmentEntity> captor = ArgumentCaptor.forClass(AssignmentEntity.class);
@@ -96,6 +96,6 @@ class AssignmentServiceTest {
 
         AssignmentEntity savedAssignment = captor.getValue();
         assertEquals(assignmentName, savedAssignment.getAssignmentName());
-        assertEquals(0, savedAssignment.getWeeks());
+        assertEquals(2, savedAssignment.getWeeks());
     }
 }

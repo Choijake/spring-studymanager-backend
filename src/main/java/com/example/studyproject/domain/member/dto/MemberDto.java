@@ -4,8 +4,10 @@ import com.example.studyproject.domain.member.entity.MemberEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-
+@Getter
+@Setter
 public class MemberDto {
     private String memberName;
     private boolean attendance; //출석 여부
