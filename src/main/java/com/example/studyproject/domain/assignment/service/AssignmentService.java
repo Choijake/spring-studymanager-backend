@@ -10,6 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
+import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 @Service
@@ -62,11 +64,10 @@ public class AssignmentService {
     }
 
     //주차별로 과제이름(ex. 세션 4,5듣기)
-    public void updateWeekelyAssignment(String assignmentName, int weeks){
-        AssignmentEntity assignmentEntity = new AssignmentEntity(assignmentName, weeks);
+    public void updateWeekelyAssignment(String assignmentName, Date deadline){
+        AssignmentEntity assignmentEntity = new AssignmentEntity(assignmentName, deadline);
         assignmentRepository.save(assignmentEntity);
     }
 
-
-
+    //public void getWeekelyAssignment(String )
 }

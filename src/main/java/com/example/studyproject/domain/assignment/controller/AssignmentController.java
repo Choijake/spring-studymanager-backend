@@ -38,7 +38,9 @@ public class AssignmentController {
 
     @PostMapping("/updateWeeklyAssignment")
     public void updateWeekelyAssignment(@RequestBody AssignmentDto assignmentDto){
-        assignmentService.updateWeekelyAssignment(assignmentDto.getAssignmentName(), assignmentDto.getWeeks());
+        assignmentService.updateWeekelyAssignment(assignmentDto.getAssignmentName(), assignmentDto.getDeadline());
     }
+
+
 }
 

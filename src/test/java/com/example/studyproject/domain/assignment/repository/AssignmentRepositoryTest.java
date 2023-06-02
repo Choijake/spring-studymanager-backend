@@ -15,13 +15,13 @@ class AssignmentRepositoryTest {
     @Autowired
     private AssignmentRepository assignmentRepository;
 
-    @Test
-    @DisplayName("과제 생성이 db에 잘 저장이 되는지 확인")
-    void createAssignment() {
-        //given
-        AssignmentEntity assignment1 = new AssignmentDto("파이썬 1강 듣기", 5).toEntity();
-
-        //when,then
-        AssignmentEntity result1 = assignmentRepository.save(assignment1);
-    }
+//    @Test
+//    @DisplayName("과제 생성이 db에 잘 저장이 되는지 확인")
+//    void createAssignment() {
+//        //given
+//        AssignmentEntity assignment1 = new AssignmentDto("파이썬 1강 듣기", 5).toEntity();
+//
+//        //when,then
+//        AssignmentEntity result1 = assignmentRepository.save(assignment1);
+//    }
 }

@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/detail")
+@RequestMapping("/detail")
 public class SubjectController {
     @Autowired
     private SubjectDetailService subjectDetailService;
