@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @NoArgsConstructor
 @Getter
 @Entity
@@ -18,15 +20,15 @@ public class AssignmentEntity extends BaseTimeEntity {
     @Column(nullable = false)
     private String assignmentName; //과제 이름
 
-    @Column(nullable = false)
-    private float assignmentProgress = 0; //진행률 퍼센트
+//    @Column(nullable = false)
+//    private float assignmentProgress = 0; //진행률 퍼센트
 
     @Column(nullable = false)
-    private int weeks; //몇주차 인지(=스터디주차)
+    private Date deadline;
 
     @Builder
-    public AssignmentEntity(String assignmentName, int weeks ) {
+    public AssignmentEntity(String assignmentName, Date deadline ) {
         this.assignmentName = assignmentName;
-        this.weeks = weeks;
+        this.deadline = deadline;
     }
 }
